@@ -1,0 +1,4 @@
+,Model_name,Average Reward,No_fail,Fail_rate
+0,RL_BC,500.0,0,0.0
+1,BC_only,500.0,0,0.0
+2,RL_only,500.0,0,0.0
