@@ -11,19 +11,19 @@ For RL + BC, I had pretrained using same dataset from BC part, then using Cycle-
 
 <a align="center">
   <figure style="display: inline-block; margin: 10px;">
-    <img src="D:\PythonProject1\GYM\Gif demo\RL_only_LR=0.0001.gif" width="200">
+    <img src="Gif demo\RL_only_LR=0.0001.gif" width="200">
     <figcaption style="text-align: center;">RL_only_LR=0.0001</figcaption>
   </figure>
   <figure style="display: inline-block; margin: 10px;">
-    <img src="D:\PythonProject1\GYM\Gif demo\RL_only_LR=0.001.gif" width="200">
+    <img src="Gif demo\RL_only_LR=0.001.gif" width="200">
     <figcaption style="text-align: center;">RL_only_LR=0.001</figcaption>
   </figure>
   <figure style="display: inline-block; margin: 10px;">
-    <img src="D:\PythonProject1\GYM\Gif demo\BC_only.gif" width="200">
+    <img src="Gif demo\BC_only.gif" width="200">
     <figcaption style="text-align: center;">BC_only</figcaption>
   </figure>
   <figure style="display: inline-block; margin: 10px;">
-    <img src="D:\PythonProject1\GYM\Gif demo\RL_BC.gif" width="200">
+    <img src="Gif demo\RL_BC.gif" width="200">
     <figcaption style="text-align: center;">RL_BC</figcaption>
   </figure><br/>
   <i>Sample results</i>
