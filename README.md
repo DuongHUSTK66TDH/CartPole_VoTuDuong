@@ -7,7 +7,7 @@ For only Reinforcement, I had used a Deep Q-learning network.
 
 For Behavior Cloning, I had used a simple Deep Neural Network trained on the dataset from [NathanGavenski](https://huggingface.co/datasets/NathanGavenski/CartPole-v1/viewer/default/train?p=1&views%5B%5D=train).
 
-For RL + BC, I had pretrained using same dataset from BC part, then using Cycle-of-Learning (CoL) to learn from the environment. The method CoL is presented in the paper **Integrating Behavior Cloning and Reinforcement Learning for Improved Performance in Dense and Sparse Reward Environments ** [paper](https://arxiv.org/abs/1910.04281).
+For RL + BC, I had pretrained using same dataset from BC part, then using Cycle-of-Learning (CoL) to learn from the environment. The method CoL is presented in the paper **Integrating Behavior Cloning and Reinforcement Learning for Improved Performance in Dense and Sparse Reward Environments** [paper](https://arxiv.org/abs/1910.04281).
 
 <p align="center">
   <img src="Gif demo\RL_only_LR=0.0001.gif" width="200">
