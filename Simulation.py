@@ -1,12 +1,9 @@
-import gymnasium as gym
 import torch
-import pandas as pd
-import numpy as np
-from Environment_Agent import StudentModel,Environment
-from pkg_resources import resource_stream, resource_exists
+from src.Environment_Agent import StudentModel,Environment
+
 
 #Environment init
-FILE_MODEL = ["RL_BC_only_CartPole-v1.pth","Good BC_only//Ver 1//BC_only_CartPole-v1.pth","RL_only result//LR=0.001//RL_CartPole-v1.pth"]
+FILE_MODEL = ["Trained_models//RL_BC_CartPole-v1.pth","Trained_models//BC_only_CartPole-v1.pth","Trained_models//RL_CartPole-v1.pth"]
 MODEL_NAME = ["RL_BC","BC_only","RL_only"]
 device = "cuda" if torch.cuda.is_available() else "cpu"
 env_test = Environment(env_name="CartPole-v1", render_mode="rgb_array", low_bounder=-0.2, up_bounder=0.2)
@@ -16,12 +13,13 @@ for i in range(len(FILE_MODEL)):
     model_test_state_dic = torch.load(FILE_MODEL[i])
     model_test.load_state_dict(model_test_state_dic)
     model_test.eval()
-    _,avg_res,goal,fail = env_test.simulate_agent(model=model_test,num_episodes=100000)
-    result.append([MODEL_NAME[i],avg_res,goal,fail])
-    print(avg_res,goal,fail)
-    #env_test.video_simulation(agent_model=model_test,model_name="RL+BC",video_path="vids//RL_BC_Simulation.mp4")
+    #_,avg_res,goal,fail = env_test.simulate_agent(model=model_test,num_episodes=100000)
+    # result.append([MODEL_NAME[i],avg_res,goal,fail])
+    # print(avg_res,goal,fail)
+    video_path = "Video demo//"+MODEL_NAME[i]+".mp4"
+    env_test.video_simulation(agent_model=model_test,model_name=MODEL_NAME[i],video_path=video_path)
 
-df  = pd.DataFrame(data = result,columns = ["Model_name", "Average Reward", "No_fail","Fail_rate"])
-df.to_csv(f"Test_competition.csv")
+# df  = pd.DataFrame(data = result,columns = ["Model_name", "Average Reward", "No_fail","Fail_rate"])
+# df.to_csv(f"Test_competition.csv")
 
 env_test.close()
